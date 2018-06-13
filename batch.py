@@ -14,6 +14,7 @@ loader = Data.DataLoader(
     num_workers=2,  # treads=2
 )
 
+
 for epoch in range(3):
     for step, (batch_x, batch_y) in enumerate(loader):
         # training...
