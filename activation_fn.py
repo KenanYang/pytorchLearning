@@ -1,15 +1,15 @@
 import torch
-import torch.nn.functional as F 
+import torch.nn.functional as F
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
 
 # fake data
 
-x = torch.linspace(-5,5,200)
+x = torch.linspace(-5, 5, 200)
 x = Variable(x)
-x_np = x.data.numpy() #used for plot
+x_np = x.data.numpy()  # used for plot
 
-#activation functions:
+# activation functions:
 y_relu = F.relu(x).data.numpy()
 y_sigmoid = F.sigmoid(x).data.numpy()
 y_tanh = F.tanh(x).data.numpy()
@@ -39,5 +39,3 @@ plt.ylim((-0.2, 6))
 plt.legend(loc='best')
 
 plt.show()
-
-
