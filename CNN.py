@@ -22,7 +22,7 @@ train_data = torchvision.datasets.MNIST(
     download=DOWNLOAD_MNIST,          # 没下载就下载, 下载了就不用再下了
 )
 
-# plot one example
+# # plot one example
 # print(train_data.train_data.size())  # (600000, 28 ,28)
 # print(train_data.train_labels.size())  # (60000)
 # # print(train_data.train_data[0].numpy())
