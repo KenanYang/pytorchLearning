@@ -29,6 +29,10 @@ v_out = torch.mean(variable * variable)
 
 v_out.backward()
 
+t_out.backward()
+
+print(tensor)
+
 print(variable.grad)
 
 print(variable)
