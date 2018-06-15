@@ -24,19 +24,22 @@ t_out = torch.mean(tensor * tensor)
 v_out = torch.mean(variable * variable)
 
 
-# print(t_out)
-# print(v_out)
+print('t_tou: ', t_out)
+print('v_out: ', v_out)
 
 v_out.backward()
 
-t_out.backward()
 
-print(tensor)
+print('tensor: ', tensor)
 
-print(variable.grad)
+print('variable.grad: ', variable.grad)
 
-print(variable)
+print('variable: ', variable)
 
-print(variable.data)
+print('variable.data: ', variable.data)
 
-print(variable.data.numpy())
+print('variable.data.numpy(): ', variable.data.numpy())
+
+# print('variable.numpy(): ', variable.numpy())  # RuntimeError: Can't call numpy() on Variable that requires grad. Use var.detach().numpy() instead.
+
+print('variable.detach().numpy(): ', variable.detach().numpy())
