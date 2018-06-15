@@ -55,7 +55,7 @@ class RNN(nn.Module):
 
 
 rnn = RNN()
-# print(rnn)
+print(rnn)
 
 optimizer = torch.optim.Adam(rnn.parameters(), lr=LR)   # optimize all parameters
 loss_func = nn.CrossEntropyLoss()   # the target label is not one-hotted
